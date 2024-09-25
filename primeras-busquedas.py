@@ -24,7 +24,7 @@ alba_id = cl.user_id_from_username("claudianicolasa")
 
 #user_media = cl.user_medias_gql(alba_id, amount=20, sleep=5)
 
-user_media = cl.user_clips_v1(alba_id, amount=55)
+user_media = cl.user_clips_v1(alba_id)
 
 
 print(len(user_media))
@@ -41,7 +41,7 @@ for media in user_media:
     likes_media_user = media.like_count
     taken_at_user = media.taken_at
     media_type_user = media.media_type
-    view_count_user = media.view_count
+    view_count_user = media.play_count
     caption_text_user = media.caption_text
     rows.append({
 
