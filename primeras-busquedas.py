@@ -20,11 +20,11 @@ post_id = cl.media_pk_from_url("https://www.instagram.com/p/C3QkcQ6sVPW/?img_ind
 
 post =  cl.media_info(post_id)
 
-alba_id = cl.user_id_from_username("albisites")
+alba_id = cl.user_id_from_username("claudianicolasa")
 
-user_media = cl.user_medias(alba_id, 10)
+#user_media = cl.user_medias_gql(alba_id, amount=20, sleep=5)
 
-
+user_media = cl.user_clips_v1(alba_id, amount=55)
 
 
 print(len(user_media))
@@ -36,12 +36,22 @@ rows = []
 
 
 for media in user_media:
+
     commentarios_media_user = media.comment_count
     likes_media_user = media.like_count
-
+    taken_at_user = media.taken_at
+    media_type_user = media.media_type
+    view_count_user = media.view_count
+    caption_text_user = media.caption_text
     rows.append({
+
         "comentarios" : commentarios_media_user,
-        "likes" : likes_media_user
+        "likes" : likes_media_user,
+        "fecha": taken_at_user,
+        "tipo_publicacion" : media_type_user,
+        "views" : view_count_user,
+        "titulo": caption_text_user
+
     })
 
 
