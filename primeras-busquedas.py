@@ -22,15 +22,22 @@ post =  cl.media_info(post_id)
 
 alba_id = cl.user_id_from_username("albisites")
 
-user_media = cl.user_medias(alba_id)
+user_media = cl.user_medias(alba_id, 10)
+
+
+
 
 print(len(user_media))
 
+#for media in user_media:
+
+
 rows = []
 
+
 for media in user_media:
-    commentarios_media_user = media["comment_count"]
-    likes_media_user = media["like_count"] 
+    commentarios_media_user = media.comment_count
+    likes_media_user = media.like_count
 
     rows.append({
         "comentarios" : commentarios_media_user,
