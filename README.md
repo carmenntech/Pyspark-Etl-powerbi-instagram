@@ -1,22 +1,18 @@
-Uso de la api no oficial de instagram para realizar busquedas de post, perfiles... Para la documentación de la misma -> https://github.com/subzeroid/instagrapi
+
+__Extracion de datos:__ Mediante la api no oficial de instagram. Para la documentación de la misma -> https://github.com/subzeroid/instagrapi
+
+__Transformacion de los datos:__ Mediante la libreria pyspark
+
+__VIsualizacion de datos:__ Usando la herramienta de Power Bi
  
 # Instalación 
 
 Python >= 3.9 required
 
-Para instalar la libreria linkedin_api, usa el siguiente comando:
+Para instalar todas las librerias necesarias, usa los siguientes comandos:
 
 ``pip install instagrapi``
 
+``pip install pyspark``
 
-# Primeros pasos
 
-```
-from instagrapi import Client
-
-cl = Client()
-cl.login(ACCOUNT_USERNAME, ACCOUNT_PASSWORD)
-
-user_id = cl.user_id_from_username(ACCOUNT_USERNAME)
-medias = cl.user_medias(user_id, 20)
-```
