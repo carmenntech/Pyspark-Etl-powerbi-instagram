@@ -20,7 +20,7 @@ post_id = cl.media_pk_from_url("https://www.instagram.com/p/C3QkcQ6sVPW/?img_ind
 
 post =  cl.media_info(post_id)
 
-user_id = cl.user_id_from_username("claudianicolasa")
+user_id = cl.user_id_from_username("albisites")
 
 #user_media = cl.user_medias_gql(alba_id, amount=20, sleep=5)
 
@@ -62,4 +62,4 @@ for media in user_media:
 df = pd.DataFrame(rows)
 print(df)
 # Guarda datos en CSV:
-df.to_csv('data-user-reels-claudianicolasa.csv', header=False, index=False)
+df.to_csv('data-user-reels-albisites.csv', header=False, index=False)
