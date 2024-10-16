@@ -6,7 +6,7 @@ cl = Client()
 cl.login(ACCOUNT_USERNAME, ACCOUNT_PASSWORD)
 
 
-huser_id = cl.user_id_from_username(ACCOUNT_USERNAME)
+#huser_id = cl.user_id_from_username(ACCOUNT_USERNAME)
 #medias = cl.user_medias(user_id, 20)
 
 #userpablo = cl.user_id_from_username("albisites")
@@ -16,9 +16,9 @@ huser_id = cl.user_id_from_username(ACCOUNT_USERNAME)
 #alba = cl.user_info_by_username('albisites')
 
 
-post_id = cl.media_pk_from_url("https://www.instagram.com/p/C3QkcQ6sVPW/?img_index=1")
+#post_id = cl.media_pk_from_url("https://www.instagram.com/p/C3QkcQ6sVPW/?img_index=1")
 
-post =  cl.media_info(post_id)
+#post =  cl.media_info(post_id)
 
 user_id = cl.user_id_from_username("albisites")
 
@@ -62,4 +62,4 @@ for media in user_media:
 df = pd.DataFrame(rows)
 print(df)
 # Guarda datos en CSV:
-df.to_csv('data-user-reels-albisites.csv', header=False, index=False)
+df.to_parquet('data-user-reels-albasites.parquet', index=False)
