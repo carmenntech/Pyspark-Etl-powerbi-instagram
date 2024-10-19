@@ -1,0 +1,2 @@
+1 - No se porque cuando casteo los campos a algo que no sea string da error
+2 - No se porque no hace en algunos campos bien los de dejar solo los hastag
